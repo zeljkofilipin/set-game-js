@@ -18,6 +18,13 @@ module.exports = function(grunt) {
         },
         src: ['test/**/*.js']
       }
+    },
+
+    // Configure a run task
+    run: {
+      index: {
+        args: ['./index.js']
+      }
     }
 
   });
@@ -28,7 +35,10 @@ module.exports = function(grunt) {
   // Add the grunt-mocha-test tasks. 
   grunt.loadNpmTasks('grunt-mocha-test');
 
+  // Add the grunt-run tasks. 
+  grunt.loadNpmTasks('grunt-run');
+
   // Default task(s).
-  grunt.registerTask('default', ['jsonlint', 'mochaTest']);
+  grunt.registerTask('default', ['jsonlint', 'mochaTest', 'run']);
 
 };

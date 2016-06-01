@@ -31,6 +31,7 @@
     "grunt": "^1.0.1",
     "grunt-jsonlint": "^1.0.8",
     "grunt-mocha-test": "^0.12.7",
+    "grunt-run": "^0.6.0",
     "jsonlint": "^1.6.2",
     "mocha": "^2.5.3"
   },
