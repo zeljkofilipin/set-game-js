@@ -8,7 +8,6 @@
 
 ## TODO
 
-- https://github.com/gruntjs/grunt-contrib-jshint
 - https://github.com/jscs-dev/grunt-jscs
 - https://www.npmjs.com/package/remark-lint
 

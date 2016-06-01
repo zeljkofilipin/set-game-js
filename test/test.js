@@ -10,7 +10,7 @@ describe('Set game', function() {
         "oval open green 2",
         "oval open red 2",
         "oval open blue 2"
-      ]
+      ];
       assert.isTrue(set(cards));
     });
 

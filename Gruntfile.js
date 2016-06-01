@@ -3,6 +3,11 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
 
+    // Configure a jshint task
+    jshint: {
+      all: ['Gruntfile.js', 'index.js', 'lib/**/*.js', 'test/**/*.js']
+    },
+
     // Configure a jsonlint task
     jsonlint: {
       sample: {
@@ -29,16 +34,19 @@ module.exports = function(grunt) {
 
   });
 
-  // Add the grunt-jsonlint tasks. 
+  // Add the grunt-contrib-jshint tasks. 
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+
+  // Add the grunt-jsonlint tasks.
   grunt.loadNpmTasks('grunt-jsonlint');
 
-  // Add the grunt-mocha-test tasks. 
+  // Add the grunt-mocha-test tasks.
   grunt.loadNpmTasks('grunt-mocha-test');
 
-  // Add the grunt-run tasks. 
+  // Add the grunt-run tasks.
   grunt.loadNpmTasks('grunt-run');
 
   // Default task(s).
-  grunt.registerTask('default', ['jsonlint', 'mochaTest', 'run']);
+  grunt.registerTask('default', ['jshint', 'jsonlint', 'mochaTest', 'run']);
 
 };
