@@ -27,7 +27,9 @@
     "x64"
   ],
   "devDependencies": {
-    "jsonlint": "^1.6.2"
+    "chai": "^3.5.0",
+    "jsonlint": "^1.6.2",
+    "mocha": "^2.5.3"
   },
   "dependencies": {
     "selenium-webdriver": "^2.53.2"
