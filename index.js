@@ -6,5 +6,5 @@ var driver = new webdriver.Builder()
     .forBrowser('firefox')
     .build();
 
-driver.get('http://www.setgame.com/set/puzzle');
+driver.get('http://smart-games.org/en/set/start');
 driver.quit();
