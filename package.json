@@ -28,5 +28,8 @@
   ],
   "devDependencies": {
     "jsonlint": "^1.6.2"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^2.53.2"
   }
 }
