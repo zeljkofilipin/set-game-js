@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jsonlint package.json"
   },
   "repository": {
     "type": "git",
@@ -16,10 +16,17 @@
     "url": "https://github.com/zeljkofilipin/set-game-js/issues"
   },
   "homepage": "https://github.com/zeljkofilipin/set-game-js#readme",
-  "engines" : {
-    "node" : "~6.2.0",
-    "npm" : "~3.9.2"
+  "engines": {
+    "node": "~6.2.0",
+    "npm": "~3.9.2"
   },
-  "os" : [ "darwin" ],
-  "cpu" : [ "x64" ]
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "devDependencies": {
+    "jsonlint": "^1.6.2"
+  }
 }
