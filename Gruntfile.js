@@ -7,12 +7,12 @@ require('load-grunt-tasks')(grunt);
 
     // Configure a eslint task
     eslint: {
-      target: ['Gruntfile.js', 'index.js', 'lib/**/*.js', 'test/**/*.js']
+      target: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js']
     },
 
     // Configure a jshint task
     jshint: {
-      all: ['Gruntfile.js', 'index.js', 'lib/**/*.js', 'test/**/*.js']
+      all: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js']
     },
 
     // Configure a jsonlint task
@@ -35,7 +35,7 @@ require('load-grunt-tasks')(grunt);
     // Configure a run task
     run: {
       index: {
-        args: ['./index.js']
+        args: ['./test/selenium.js']
       }
     }
 
