@@ -12,13 +12,16 @@ require('load-grunt-tasks')(grunt);
 
     // Configure a jshint task
     jshint: {
-      all: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js']
+      all: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js'],
+      options: {
+        jshintrc: '.jshintrc'
+      }
     },
 
     // Configure a jsonlint task
     jsonlint: {
       sample: {
-        src: [ 'package.json' ]
+        src: [ '.jshintrc', '.*.json', '*.json' ]
       }
     },
 
