@@ -8,7 +8,6 @@
 
 ## TODO
 
-- https://github.com/jscs-dev/grunt-jscs
 - https://www.npmjs.com/package/remark-lint
 
 [![Build Status](https://travis-ci.org/zeljkofilipin/set-game-js.svg?branch=master)](https://travis-ci.org/zeljkofilipin/set-game-js)
