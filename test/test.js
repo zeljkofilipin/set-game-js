@@ -14,6 +14,15 @@ describe('Set game', function() {
       assert.isTrue(set(cards));
     });
 
+    it('should return false when three cards are not a set');/*, function () {
+      var cards = [
+        "squiggle solid red 1",
+        "squiggle striped blue 1",
+        "squiggle solid blue 2"
+      ];
+      assert.isNotTrue(set(cards));
+    });*/
+
   });
 
 });
