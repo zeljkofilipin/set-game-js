@@ -8,6 +8,7 @@
 
 ## TODO
 
-- https://www.npmjs.com/package/remark-lint
+- yaml validator
+- markdown validator
 
 [![Build Status](https://travis-ci.org/zeljkofilipin/set-game-js.svg?branch=master)](https://travis-ci.org/zeljkofilipin/set-game-js)
