@@ -30,18 +30,11 @@ require('load-grunt-tasks')(grunt);
         },
         src: ['test/**/*.js']
       }
-    },
-
-    // Configure a run task
-    run: {
-      index: {
-        args: ['./test/selenium.js']
-      }
     }
 
   });
 
   // Default task(s).
-  grunt.registerTask('default', ['eslint', 'jshint', 'jsonlint', 'mochaTest', 'run']);
+  grunt.registerTask('default', ['eslint', 'jshint', 'jsonlint', 'mochaTest']);
 
 };
