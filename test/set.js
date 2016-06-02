@@ -36,6 +36,15 @@ describe('Set game', function() {
       assert.isTrue(set.feature(features));
     });
 
+    it('should return false when a feature of three cards is not the same', function () {
+      var features = [
+        "squiggle",
+        "oval",
+        "oval"
+      ];
+      assert.isNotTrue(set.feature(features));
+    });
+
   });
 
 });
