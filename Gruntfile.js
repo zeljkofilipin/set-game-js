@@ -30,6 +30,7 @@ require('load-grunt-tasks')(grunt);
       test: {
         options: {
           reporter: 'spec',
+          timeout: 10000
         },
         src: ['test/**/*.js']
       }
