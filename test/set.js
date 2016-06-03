@@ -36,7 +36,7 @@ describe('Set game', function () {
       assert.isTrue(set.featureIsTheSame(features));
     });
 
-    it('should return false when a feature is not the same for one card', function () {
+    it('should return false when a feature is different for one card', function () {
       var features = [
         'oval',
         'oval',
@@ -52,6 +52,37 @@ describe('Set game', function () {
         'squiggle',
       ];
       assert.isNotTrue(set.featureIsTheSame(features));
+    });
+
+  });
+
+  describe('#featureIsDifferent()', function () {
+
+    it('should return false when a feature is the same for all cards', function () {
+      var features = [
+        'oval',
+        'oval',
+        'oval',
+      ];
+      assert.isNotTrue(set.featureIsDifferent(features));
+    });
+
+    it('should return false when a feature is different for one card', function () {
+      var features = [
+        'oval',
+        'oval',
+        'squiggle',
+      ];
+      assert.isNotTrue(set.featureIsDifferent(features));
+    });
+
+    it('should return true when a feature is different for all cards', function () {
+      var features = [
+        'diamond',
+        'oval',
+        'squiggle',
+      ];
+      assert.isTrue(set.featureIsDifferent(features));
     });
 
   });
