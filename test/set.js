@@ -87,4 +87,15 @@ describe('Set game', function () {
 
   });
 
+  describe('#stringToArray()', function () {
+
+    it('should return array when given a string', function () {
+      var string = 'oval open green 2';
+      var array =  ['oval', 'open', 'green', '2'];
+
+      assert.strictEqual(array.toString(), set.stringToArray(string).toString());
+    });
+
+  });
+
 });
