@@ -16,11 +16,11 @@ describe('Set game', function () {
 
     it('should return false when cards are not a set');/*, function () {
       var cards = [
-        "squiggle solid red 1",
-        "squiggle striped blue 1",
-        "squiggle solid blue 2"
+        'squiggle solid red 1',
+        'squiggle striped blue 1',
+        'squiggle solid blue 2',
       ];
-      assert.isNotTrue(set(cards));
+      assert.isNotTrue(set.set(cards));
     });*/
 
   });
