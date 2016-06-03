@@ -25,7 +25,7 @@ describe('Set game', function () {
 
   });
 
-  describe('#feature()', function () {
+  describe('#featureIsTheSame()', function () {
 
     it('should return true when a feature of three cards is the same', function () {
       var features = [
@@ -33,7 +33,7 @@ describe('Set game', function () {
         'oval',
         'oval',
       ];
-      assert.isTrue(set.feature(features));
+      assert.isTrue(set.featureIsTheSame(features));
     });
 
     it('should return false when a feature of three cards is not the same', function () {
@@ -42,7 +42,7 @@ describe('Set game', function () {
         'oval',
         'oval',
       ];
-      assert.isNotTrue(set.feature(features));
+      assert.isNotTrue(set.featureIsTheSame(features));
     });
 
   });
