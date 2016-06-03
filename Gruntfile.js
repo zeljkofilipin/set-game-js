@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-require('load-grunt-tasks')(grunt);
+  require('load-grunt-tasks')(grunt);
 
   // Project configuration.
   grunt.initConfig({
@@ -8,6 +8,14 @@ require('load-grunt-tasks')(grunt);
     // Configure a eslint task
     eslint: {
       target: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js']
+    },
+
+    // Configure a jscs task
+    jscs: {
+      src: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js'],
+      options: {
+        fix: true // Autofix code style violations when possible.
+      }
     },
 
     // Configure a jshint task
@@ -39,6 +47,6 @@ require('load-grunt-tasks')(grunt);
   });
 
   // Default task(s).
-  grunt.registerTask('default', ['eslint', 'jshint', 'jsonlint', 'mochaTest']);
+  grunt.registerTask('default', ['eslint', 'jscs', 'jshint', 'jsonlint', 'mochaTest']);
 
 };

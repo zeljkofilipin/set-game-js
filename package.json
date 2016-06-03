@@ -31,6 +31,7 @@
     "grunt": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-eslint": "^18.1.0",
+    "grunt-jscs": "^2.8.0",
     "grunt-jsonlint": "^1.0.8",
     "grunt-mocha-test": "^0.12.7",
     "jsonlint": "^1.6.2",
