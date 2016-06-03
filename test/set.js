@@ -93,7 +93,7 @@ describe('Set game', function () {
       var string = 'oval open green 2';
       var array =  ['oval', 'open', 'green', '2'];
 
-      assert.strictEqual(array.toString(), set.stringToArray(string).toString());
+      assert.deepEqual(array, set.stringToArray(string));
     });
 
   });
