@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   require('load-grunt-tasks')(grunt);
 
@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 
     // Configure a eslint task
     eslint: {
-      target: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js']
+      target: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js'],
     },
 
     // Configure a jscs task
@@ -16,22 +16,22 @@ module.exports = function(grunt) {
       options: {
         config: '.jscsrc',
         fix: true // Autofix code style violations when possible.
-      }
+      },
     },
 
     // Configure a jshint task
     jshint: {
       all: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js'],
       options: {
-        jshintrc: '.jshintrc'
-      }
+        jshintrc: '.jshintrc',
+      },
     },
 
     // Configure a jsonlint task
     jsonlint: {
       sample: {
-        src: [ '.jshintrc', '.*.json', '*.json' ]
-      }
+        src: ['.jshintrc', '.*.json', '*.json'],
+      },
     },
 
     // Configure a mochaTest task
@@ -39,11 +39,11 @@ module.exports = function(grunt) {
       test: {
         options: {
           reporter: 'spec',
-          timeout: 10000
+          timeout: 10000,
         },
-        src: ['test/**/*.js']
-      }
-    }
+        src: ['test/**/*.js'],
+      },
+    },
 
   });
 
