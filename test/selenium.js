@@ -1,10 +1,10 @@
-var By = require('selenium-webdriver').By,
-    until = require('selenium-webdriver').until,
-    firefox = require('selenium-webdriver/firefox'),
-    test = require('selenium-webdriver/testing');
+var By = require('selenium-webdriver').By;
+var until = require('selenium-webdriver').until;
+var firefox = require('selenium-webdriver/firefox');
+var test = require('selenium-webdriver/testing');
+var driver;
 
 test.describe('Set game', function () {
-  var driver;
 
   test.before(function () {
     driver = new firefox.Driver();
@@ -18,4 +18,5 @@ test.describe('Set game', function () {
     driver.get('http://smart-games.org/en/set/start');
     driver.wait(until.titleIs('Set - online card game'), 1000);
   });
+
 });
