@@ -14,14 +14,14 @@ describe('Set game', function () {
       assert.isTrue(set.set(cards));
     });
 
-    it('should return false when cards are not a set');/*, function () {
+    it('should return false when cards are not a set', function () {
       var cards = [
         'squiggle solid red 1',
         'squiggle striped blue 1',
         'squiggle solid blue 2',
       ];
       assert.isNotTrue(set.set(cards));
-    });*/
+    });
 
   });
 
