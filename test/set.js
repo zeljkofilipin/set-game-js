@@ -151,19 +151,19 @@ describe('Set game', function () {
   describe('#cardsToGroupedFeatures()', function () {
 
     it('should convert array of cards to array of features, grouped by feature', function () {
-      var cards = [
-        'oval open green 2',
-        'oval open red 2',
-        'oval open blue 2',
+      var featuresGroupedByCard = [
+        ['oval', 'open', 'green', '2'],
+        ['oval', 'open', 'red', '2'],
+        ['oval', 'open', 'blue', '2'],
       ];
-      var features = [
+      var featuresGroupedByFeature = [
         ['oval', 'oval', 'oval'],
         ['open', 'open', 'open'],
         ['green', 'red', 'blue'],
         ['2', '2', '2'],
       ];
 
-      assert.deepEqual(features, set.cardsToGroupedFeatures(cards));
+      assert.deepEqual(featuresGroupedByFeature, set.cardsToGroupedFeatures(featuresGroupedByCard));
     });
 
   });
