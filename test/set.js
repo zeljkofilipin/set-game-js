@@ -129,4 +129,24 @@ describe('Set game', function () {
 
   });
 
+  describe('#cardsToFeatures()', function () {
+
+    it('should convert array of cards to array of features', function () {
+      var cards = [
+        'oval open green 2',
+        'oval open red 2',
+        'oval open blue 2',
+      ];
+      var features = [
+        ['oval', 'oval', 'oval'],
+        ['open', 'open', 'open'],
+        ['green', 'red', 'blue'],
+        ['2', '2', '2'],
+      ];
+
+      assert.deepEqual(features, set.cardsToFeatures(cards));
+    });
+
+  });
+
 });
