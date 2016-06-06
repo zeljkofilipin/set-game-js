@@ -87,6 +87,37 @@ describe('Set game', function () {
 
   });
 
+  describe('#featureIsTheSameOrDifferent()', function () {
+
+    it('should return true when a feature is the same for all cards', function () {
+      var features = [
+        'oval',
+        'oval',
+        'oval',
+      ];
+      assert.isTrue(set.featureIsTheSameOrDifferent(features));
+    });
+
+    it('should return false when a feature is different for one card', function () {
+      var features = [
+        'oval',
+        'oval',
+        'squiggle',
+      ];
+      assert.isNotTrue(set.featureIsTheSameOrDifferent(features));
+    });
+
+    it('should return true when a feature is different for all cards', function () {
+      var features = [
+        'diamond',
+        'oval',
+        'squiggle',
+      ];
+      assert.isTrue(set.featureIsTheSameOrDifferent(features));
+    });
+
+  });
+
   describe('#stringToArray()', function () {
 
     it('should return array when given a string', function () {
