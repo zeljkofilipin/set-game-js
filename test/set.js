@@ -129,9 +129,9 @@ describe('Set game', function () {
 
   });
 
-  describe('#cardsToFeatures()', function () {
+  describe('#cardsToGroupedFeatures()', function () {
 
-    it('should convert array of cards to array of features', function () {
+    it('should convert array of cards to array of features, grouped by feature', function () {
       var cards = [
         'oval open green 2',
         'oval open red 2',
@@ -144,7 +144,7 @@ describe('Set game', function () {
         ['2', '2', '2'],
       ];
 
-      assert.deepEqual(features, set.cardsToFeatures(cards));
+      assert.deepEqual(features, set.cardsToGroupedFeatures(cards));
     });
 
   });
