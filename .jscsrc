@@ -1,3 +1,5 @@
 {
-	"preset": "airbnb"
+	"requireSpaceAfterComma": false,
+	"preset": "airbnb",
+	"verbose": true,
 }
