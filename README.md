@@ -1,5 +1,10 @@
 # Playing Set game with JavaScript and Selenium
 
+## Usage
+
+    npm install
+    grunt
+
 ## Links
 
 - http://smart-games.org/en/set/start
