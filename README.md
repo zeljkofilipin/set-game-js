@@ -11,6 +11,7 @@
 - http://smart-games.org/en/set_classic/start/10
 - https://www.npmjs.com/package/set-game-js
 - https://github.com/zeljkofilipin/set-game-js
+- https://youtu.be/sTDY7Sb18x4
 - https://github.com/zeljkofilipin/set-game-rb
 
 ## TODO
