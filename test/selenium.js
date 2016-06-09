@@ -22,7 +22,6 @@ test.describe('Set game', function () {
   });
 
   test.it('should get table HTML from the page', function () {
-    driver.wait(until.titleIs('Set - online card game'), 1000);
     driver.findElement(By.id('board')).getOuterHtml().then(html => {
       assert.include(html, '<table id="board" class="" border="0">');
     });
@@ -30,35 +29,15 @@ test.describe('Set game', function () {
 
   /*jshint -W083 */
   test.it('should solve the game', function () {
-    driver.wait(until.titleIs('Set - online card game'), 1000);
-    var n = 0;
-    for (var i = 1; i < 99; i++) {
+    for (var i = 0; i < 11; i++) {
       driver.findElement(By.id('board')).getOuterHtml().then(html => {
         var cards = set.htmlToCards(html);
-        console.log('i: cards');
-        console.log(cards);
         var possibleSets = set.cardsToSets(cards);
         var sets = set.sets(possibleSets);
-        console.log('i: sets');
-        console.log(sets);
         var firstSet = sets[0];
-        driver.takeScreenshot().then((image) => {
-          var screenshotFile = `screenshot-${n}.png`;
-          console.log(`i: ${screenshotFile}`);
-          require('fs').writeFile(screenshotFile, image, 'base64');
-          n++;
+        firstSet.forEach(element => {
+          driver.findElement(By.css(`img[alt$="${element} "]`)).click();
         });
-        if (firstSet) {
-          firstSet.forEach(element => {
-            driver.findElement(By.css(`img[alt$="${element} "]`)).click();
-          });
-        } else {
-          //debugger;
-          console.log('i: open 3 cards');
-          driver.isElementPresent(By.id('add_cards')).then(
-            element => driver.findElement(By.id('add_cards')).click());
-          console.log('w: uh oh, no more cards');
-        }
       });
     }
   });
