@@ -40,5 +40,8 @@ test.describe('Set game', function () {
         });
       });
     }
+
+    driver.findElement(By.css('#menu > p:nth-child(3)')).getText().then(
+      text => assert.strictEqual(text, 'Sets found: 10 / 10'));
   });
 });
