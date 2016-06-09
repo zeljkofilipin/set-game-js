@@ -10,6 +10,7 @@ test.describe('Set game', function () {
 
   test.before(function () {
     driver = new firefox.Driver();
+    driver.get('http://smart-games.org/en/set_classic/start/10');
   });
 
   test.after(function () {
@@ -17,12 +18,10 @@ test.describe('Set game', function () {
   });
 
   test.it('should open the game', function () {
-    driver.get('http://smart-games.org/en/set/start');
     driver.wait(until.titleIs('Set - online card game'), 1000);
   });
 
   test.it('should get table HTML from the page', function () {
-    driver.get('http://smart-games.org/en/set/start');
     driver.wait(until.titleIs('Set - online card game'), 1000);
     driver.findElement(By.id('board')).getOuterHtml().then(html => {
       assert.include(html, '<table id="board" class="" border="0">');
@@ -31,7 +30,6 @@ test.describe('Set game', function () {
 
   /*jshint -W083 */
   test.it('should solve the game', function () {
-    driver.get('http://smart-games.org/en/set/start');
     driver.wait(until.titleIs('Set - online card game'), 1000);
     var n = 0;
     for (var i = 1; i < 99; i++) {
