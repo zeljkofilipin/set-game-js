@@ -18,7 +18,7 @@ test.describe('Set game', function () {
   });
 
   test.it('should open the game', function () {
-    driver.wait(until.titleIs('Set - online card game'), 1000);
+    driver.getTitle().then((title) => {assert.strictEqual(title, 'Set - online card game');});
   });
 
   test.it('should get table HTML from the page', function () {
