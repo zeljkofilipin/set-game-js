@@ -9,6 +9,8 @@
 
 - https://en.wikipedia.org/wiki/Set_%28game%29
 - http://smart-games.org/en/set_classic/start/10
+- https://www.npmjs.com/package/set-game-js
+- https://github.com/zeljkofilipin/set-game-js
 - https://github.com/zeljkofilipin/set-game-rb
 
 ## TODO
