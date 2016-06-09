@@ -7,8 +7,8 @@
 
 ## Links
 
-- http://smart-games.org/en/set/start
-- http://www.setgame.com/set/puzzle
+- https://en.wikipedia.org/wiki/Set_%28game%29
+- http://smart-games.org/en/set_classic/start/10
 - https://github.com/zeljkofilipin/set-game-rb
 
 ## TODO
